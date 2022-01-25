@@ -32,7 +32,7 @@ const useStyle = makeStyles({
         fontWeight:300,
         cursor:'pointer',
         paddingTop:8,
-        marginLeft:290,
+        marginLeft:200,
         borderBottom:'1px solid black'
         
     },
@@ -94,12 +94,11 @@ const useStyle = makeStyles({
 })
 const ItemHeader =() =>{
     const classes = useStyle()
-
     return(
         <div className={classes.categoryHeader}>
             <div className={classes.resBox}>
-                <Typography className={classes.resNoText}>1</Typography>
-                <Typography className={classes.resText}>restaurants</Typography>
+                <Typography className={classes.resNoText}>Lucknow</Typography>
+                <Typography className={classes.resText}>Restaurants</Typography>
             
                 <Typography className={classes.RelText} >Relevance</Typography>
                 <Typography className={classes.DelText} >Delivery Time</Typography>

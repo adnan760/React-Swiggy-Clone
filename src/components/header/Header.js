@@ -4,6 +4,7 @@ import MonetizationOnOutlinedIcon from '@material-ui/icons/MonetizationOnOutline
 import SportsSoccerIcon from '@material-ui/icons/SportsSoccer';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import CheckBoxOutlineBlankSharpIcon from '@material-ui/icons/CheckBoxOutlineBlankSharp';
+import { Link } from 'react-router-dom';
 
 
 const useStyle = makeStyles({
@@ -148,7 +149,9 @@ const Header =() => {
     return (
         <AppBar className={classes.header}>
             <Toolbar>
+                <Link to='/'>
                 <img src={logoURL} className={classes.swiggy_logo}/>
+                </Link>
                 <div className={classes.SIconBox}>
                    <SearchIcon className={classes.SIcon} />
                    <Typography className={classes.SText}>Search</Typography>
@@ -166,11 +169,11 @@ const Header =() => {
                     <PersonOutlineIcon className={classes.ProfileIcon}/>
                     <Typography className={classes.ProfileText}>Sign In</Typography>
                 </div>
-                <div className={classes.CartIconBox}>
+                <Link to='/cart' className={classes.CartIconBox}>
                     <Badge badgeContent={0} showZero className={classes.CartBadgeIcon}/> 
                     <CheckBoxOutlineBlankSharpIcon className={classes.CartIcon}/>
                     <Typography className={classes.CartText}>Cart</Typography>
-                </div>
+                </Link>
             </Toolbar>
             
         </AppBar>
